@@ -42,8 +42,10 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'launchy'
+  gem 'pry'
+  gem 'shoulda-matchers'
     %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
         gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main' # Previously '4-0-dev' or '4-0-maintenance' branch
     end
