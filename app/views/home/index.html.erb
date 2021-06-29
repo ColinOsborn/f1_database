@@ -8,3 +8,13 @@
     <%= text_field_tag 'driver', nil, placeholder: "Driver Name", class: "form-group" %>
       <%= submit_tag "Search", class: "btn btn-outline-success" %>
 <% end %>
+
+<p>Or you can search from the list below</p>
+  <ul>
+    <% @drivers.each do |driver| %>
+    <li><%= driver.name.titleize %></li>
+    <%= form_tag driver_path, :method => 'POST' do %>
+        <%= hidden_field 'driver', nil, :value => driver.name, class: "form-group" %>                    
+      <%= submit_tag "Driver Details", class: "btn" %> 
+    <% end %>
+  <% end %>

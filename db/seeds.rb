@@ -1,7 +1,83 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# setting up current drivers to check with queries
+CurrentDriver.create!([{
+  name: 'lewis hamilton',
+  team: 'mercedes'
+},
+{
+  name: 'valtteri bottas',
+  team: 'mercedes'
+},
+{
+  name: 'max verstappen',
+  team: 'red bull'
+},
+{
+  name: 'sergio perez',
+  team: 'red bull'
+},
+{
+  name: 'daniel ricciardo',
+  team: 'mclaren'
+},
+{
+  name: 'lando norris',
+  team: 'mclaren'
+},
+{
+  name: 'sebastian vettel',
+  team: 'aston martin'
+},
+{
+  name: 'lance stroll',
+  team: 'aston martin'
+},
+{
+  name: 'esteban ocon',
+  team: 'alpine'
+},
+{
+  name: 'fernando alonso',
+  team: 'alpine'
+},
+{
+  name: 'carlos sainz jr',
+  team: 'ferrari'
+},
+{
+  name: 'charles leclerc',
+  team: 'ferrari'
+},
+{
+  name: 'yuki tsunoda',
+  team: 'alpha tauri'
+},
+{
+  name: 'pierre gasly',
+  team: 'alpha tauri'
+},
+{
+  name: 'kimi raikkonen',
+  team: 'alfa romeo'
+},
+{
+  name: 'antonio giovinazzi',
+  team: 'alfa romeo'
+},
+{
+  name: 'mick schumacher',
+  team: 'haas'
+},
+{
+  name: 'nikita mazepin',
+  team: 'haas'
+},
+{
+  name: 'george russell',
+  team: 'williams'
+},
+{
+  name: 'nicholas latifi',
+  team: 'williams'
+}])
+
+p "Created #{CurrentDriver.count} drivers"

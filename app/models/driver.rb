@@ -4,8 +4,8 @@ class Driver < ApplicationRecord
     @@service ||= F1SearchService.new
   end
 
-  def self.name_check(string)
-    string&.first
+  def self.error_handling(input)
+    input['player'].nil? ? 'Error' : input
   end
 
   def self.output_parse(name)

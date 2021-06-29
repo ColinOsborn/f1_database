@@ -22,7 +22,7 @@ describe F1SearchService do
       expect(mclaren['strTeam']).to eq('McLaren')
       expect(mclaren['intFormedYear']).to eq('1966')
       expect(mclaren['strLeague']).to eq('Formula 1')
-      expect(mclaren['strStadium']).to eq("McLaren Technology Centre Woking")
+      expect(mclaren['strStadium']).to eq('McLaren Technology Centre Woking')
       expect(mclaren['strStadiumDescription']).to include('The McLaren Technology Centre is the headquarters of the McLaren Group and all of its companies, located on a 500,000 m² site in Woking, Surrey, England.')
     end
   end
