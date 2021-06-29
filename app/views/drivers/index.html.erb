@@ -1,14 +1,7 @@
- <% if Driver.error_handling(@output) == 'Error' %>
+  <% if Driver.error_handling(@output) == 'Error' %>
     <h2>Sorry! We didn't find that driver, please search again!</h2>
     <%= link_to 'Home', '/' %>
   <% else %>
-    <%= image_tag(Driver.banner_parse(@output))%>
-  <ul>
-    <li>Name: <%= Driver.driver_name(@output) %></li>
-    <li>Nation: <%= Driver.nationality(@output) %></li>
-    <li>Birth location:<%= Driver.birth_location(@output) %></li>
-    <li>Team: <%= Driver.team(@output) %></li>
-    <li>About: <%= Driver.description_en(@output) %></li>
-  </ul>
+    <%= render 'layouts/driver' %>
   <%= link_to 'Search another driver', root_path %>
 <% end %>
