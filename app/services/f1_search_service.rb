@@ -5,8 +5,7 @@ class F1SearchService
   end
 
   def get_driver_search(name)
-    # formatted = URI.encode(name)
-    formatted = GCI.escape(name)
+    formatted = URI.encode(name)
     response = @connection.get("searchplayers.php?&p=#{formatted}")
     parse(response)
   end
