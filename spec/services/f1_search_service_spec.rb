@@ -26,4 +26,12 @@ describe F1SearchService do
       expect(mclaren['strStadiumDescription']).to include('The McLaren Technology Centre is the headquarters of the McLaren Group and all of its companies, located on a 500,000 m² site in Woking, Surrey, England.')
     end
   end
+  # context '#store_search_data' do
+  #   it 'saves the received data to the db' do
+  #     driver = F1SearchService.new.get_driver_search('Kimi Raikkonen')
+  #     kimi = driver['player'].first
+  #     expect(kimi['strPlayer']).to eq('Kimi Raikkonen')
+  #     saved = F1SearchService.new.store_search_data()
+  #   end
+  # end
 end

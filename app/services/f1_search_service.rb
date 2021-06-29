@@ -8,6 +8,8 @@ class F1SearchService
     input = name_parse(name)
     formatted = CGI.escape(input)
     response = @connection.get("searchplayers.php?&p=#{formatted}")
+    saved = parse(response)
+    store_search_data(saved)
     parse(response)
   end
 
@@ -17,10 +19,23 @@ class F1SearchService
     parse(response)
   end
 
+  def store_search_data(data)
+    search = Driver.output_parse(data)
+    Search.create!(
+      name: search[:strPlayer],
+      nationality: search[:strNationality],
+      team: search[:strTeam],
+      dob: search[:dateBorn],
+      sport: search[:strSport],
+      birth_place: search[:strBirthLocation],
+      description: search[:strDescriptionEN]
+    )
+  end
+
   private
 
   def parse(response)
-    JSON.parse(response.body)
+    JSON.parse(response.body, object_class: OpenStruct)
   end
 
   def name_parse(name)
