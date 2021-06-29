@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'faraday'
 gem 'faraday_middleware'
+gem 'simple-jsonapi-deserializer', require: 'simple_jsonapi_deserializer'
+gem 'simple_jsonapi_rails', '~> 1.3.0', source: 'http://rubygems.org'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
