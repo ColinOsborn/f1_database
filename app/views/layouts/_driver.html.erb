@@ -1,0 +1,8 @@
+ <%= image_tag(Driver.banner_parse(@output))%>
+  <ul>
+    <li>Name: <%= Driver.driver_name(@output) %></li>
+    <li>Nation: <%= Driver.nationality(@output) %></li>
+    <li>Birth location:<%= Driver.birth_location(@output) %></li>
+    <li>Team: <%= Driver.team(@output) %></li>
+    <li>About: <%= Driver.description_en(@output) %></li>
+  </ul>
