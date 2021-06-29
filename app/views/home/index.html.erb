@@ -1,0 +1,10 @@
+<h1>Formula 1 Driver DB</h1>
+
+<p>Want an indepth dive about your favorite Formula 1 driver? Search below!</p>
+<p>Ex driver:Kimi Raikkonen </p>
+
+<%= form_tag driver_path, :method => 'POST' do %>
+  <div class="form-group">
+    <%= text_field_tag 'driver', nil, placeholder: "Driver Name", class: "form-group" %>
+      <%= submit_tag "Search", class: "btn btn-outline-success" %>
+<% end %>
